@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+		<title>Exercise 3</title>
+		
+		<style type="text/css">
+			div {
+				background-color: blue;
+				padding: 20px;
+				border: 2px solid black;
+				width: 40%;
+			}
+
+			#output {
+				background-color: white;
+				width: 40%;
+			}
+
+			span {
+				font-size: large;
+				font-weight: bold;
+				color: white;
+			}	
+		</style>	
+		
+		<script type="text/javascript">
+			function calcTip(){
+				// Read the subtotal value and convert to integer
+				var subtotal = parseInt(document.getElementById("subtotal").value);
+				
+				// Read the tip percentage and convert to float
+				var tipPercent = parseFloat(document.getElementById("tip").value);
+				
+				// Calculate the tip amount
+				var tipAmount = parseInt(subtotal) * (parseFloat(tipPercent) / 100.0);
+				
+				// Check if tip is less than $2
+				if(tipAmount < 2){
+					tipAmount = 2;
+				}
+				
+				// Calculate the total
+				var total = subtotal + tipAmount;
+				
+				// Display the total with 2 decimal places
+				document.getElementById("total").innerHTML = "$" + total.toFixed(2);
+			}
+		</script>
+	</head>
+
+	<body>
+        <h1>CMPS 302 Tip Calculator</h1>
+        <div>
+            <input id="subtotal" type="text"> <span>$ Subtotal</span> <br>
+            <input id="tip" type="text"> <span>% Tip</span>
+        </div>
+        <div id="output">
+            <h2>Your total:</h2>
+            <p id="total">$0.00</p>
+        </div>
+        <div>
+            <button onclick="calcTip();">Calculate Tip</button>
+        </div>
+    </body>
+</html>

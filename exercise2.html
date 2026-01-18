@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!-- Displaying a line of text. -->
+<html>
+   <head> 
+      <title>Exercise 2</title>
+      <script type="text/javascript">
+	  	function $(id){ return document.getElementById(id); }
+
+        function enter(){
+			// Change the text content
+			$("h1").innerHTML = 'Welcome to JavaScript';
+			
+			// Style the h1 border to 2px solid green
+			$("h1").style.border = "2px solid green";
+			
+			// Style the h1 text color to brown
+			$("h1").style.color = "brown";
+			
+			// Style the h1 background color to yellow
+			$("h1").style.backgroundColor = "yellow";
+		}
+		
+		function leave(){
+			// Change the text content back
+			$("h1").innerHTML = 'mouse over';
+			
+			// Style the h1 width to 10em
+			$("h1").style.width = "10em";
+			
+			// Align the text of h1 to center
+			$("h1").style.textAlign = "center";
+		}
+
+      </script>
+   </head>
+   <body>
+      <h1 id="h1" onmouseover="enter()" onmouseout="leave()"> mouse over</h1>
+   </body>
+</html>
