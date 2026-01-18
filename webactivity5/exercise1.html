@@ -2,26 +2,29 @@
 <html>
 <head>
   <title>Exercise 1</title>
+  <link rel="stylesheet" href="../css/style.css">
 
   <script type="text/javascript">
-    function $(id) {
-      return document.getElementById(id);
-    }
-
     function myFunction() {
-      var name;
-      name = $("myname").value;
-
-      $("h1").innerHTML =
+      var name = document.getElementById("myname").value;
+      document.getElementById("h1").innerHTML =
         "Hello " + name + ", welcome to JavaScript programming!";
     }
   </script>
 </head>
 
 <body>
-  <input type="text" id="myname" />
-  <button onclick="myFunction();">click to update H1</button>
+
+  <button class="back-btn" onclick="window.location.href='../index.html'">
+    Back to Home
+  </button>
+
+  <br><br>
+
+  <input type="text" id="myname">
+  <button onclick="myFunction()">click to update H1</button>
 
   <h1 id="h1"></h1>
+
 </body>
 </html>
