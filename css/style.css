@@ -1,0 +1,72 @@
+/* General */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #00205b;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  height: 60px;
+  margin-right: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* Main content */
+main {
+  padding: 30px;
+}
+
+ul {
+  list-style-type: square;
+}
+
+a {
+  color: #00205b;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tip Calculator */
+.container {
+  background-color: white;
+  width: 60%;
+  margin: 40px auto;
+  border: 2px solid #00205b;
+}
+
+.blue-box {
+  background-color: #00205b;
+  padding: 20px;
+}
+
+.blue-box span {
+  color: white;
+  font-weight: bold;
+}
+
+.output {
+  padding: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
