@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-
-<!-- Displaying a line of text. -->
 <html>
    <head> 
       <title>Exercise 2</title>
-      <script type = "text/javascript">
+      <script type="text/javascript">
 	  	function $(id){ return document.getElementById(id); }
 
         function enter(){
-			$("h1").innerHTML='Welcome to JavaScript';
+			$("h1").innerHTML = "Welcome to JavaScript";
 			$("h1").style.border = "2px solid green";
 			$("h1").style.color = "brown";
 			$("h1").style.backgroundColor = "yellow";
 		}
-		
+
 		function leave(){
-			$("h1").innerHTML='mouse over';
+			$("h1").innerHTML = "mouse over";
 			$("h1").style.width = "10em";
 			$("h1").style.textAlign = "center";
 		}
-
       </script>
-   </head><body><h1 id = "h1" onmouseover= "enter()" onmouseout="leave()";> mouse over</h1></body>
+   </head>
+   <body>
+      <h1 id="h1" onmouseover="enter()" onmouseout="leave()">mouse over</h1>
+   </body>
 </html>
