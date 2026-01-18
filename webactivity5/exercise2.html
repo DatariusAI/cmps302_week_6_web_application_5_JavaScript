@@ -2,32 +2,37 @@
 <html>
 <head>
   <title>Exercise 2</title>
+  <link rel="stylesheet" href="../css/style.css">
 
   <script type="text/javascript">
-    function $(id) {
-      return document.getElementById(id);
-    }
-
     function enter() {
-      $("h1").innerHTML = "Welcome to JavaScript";
-      $("h1").style.border = "2px solid green";
-      $("h1").style.color = "brown";
-      $("h1").style.backgroundColor = "yellow";
+      var h1 = document.getElementById("h1");
+      h1.innerHTML = "Welcome to JavaScript";
+      h1.style.backgroundColor = "yellow";
+      h1.style.border = "2px solid green";
+      h1.style.color = "brown";
     }
 
     function leave() {
-      $("h1").innerHTML = "mouse over";
-      $("h1").style.width = "10em";
-      $("h1").style.textAlign = "center";
+      var h1 = document.getElementById("h1");
+      h1.innerHTML = "mouse over";
+      h1.style.width = "10em";
+      h1.style.textAlign = "center";
     }
   </script>
 </head>
 
 <body>
-  <h1 id="h1"
-      onmouseover="enter()"
-      onmouseout="leave()">
+
+  <button class="back-btn" onclick="window.location.href='../index.html'">
+    Back to Home
+  </button>
+
+  <br><br>
+
+  <h1 id="h1" onmouseover="enter()" onmouseout="leave()">
     mouse over
   </h1>
+
 </body>
 </html>
