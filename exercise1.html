@@ -1,27 +1,25 @@
 <!DOCTYPE html>
+
+
 <html>
    <head> 
+
       <title>Exercise1</title>  
 	  <script>
 	  	function $(id){ return document.getElementById(id); }
       </script>	  
    </head>
    <body>
-      <input type="text" id="myname"/>
-	  <button onclick="myFunction();"> click to update H1</button>  
+      <input type="text" id = "myname"/>
+	  <button onclick = "myFunction();"> click to update H1</button>  
 
       <h1 id="h1"></h1> 
 	  <script>
         function myFunction(){
-			// Define a variable name
-			var name;
-			
-			// Read the value from the text field with id "myname"
-			name = $("myname").value;
-			
-			// Concatenate the greeting message and assign to h1
-			$("h1").innerHTML = "Hello " + name + ", welcome to JavaScript programming!";
-		}
+		var name;
+		name = $("myname").value;
+		$("h1").innerHTML = "Hello " + name + ", welcome to JavaScript programming!";
+		 }
       </script>
    </body>
 </html>
